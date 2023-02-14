@@ -1,0 +1,21 @@
+Package: SCM
+Version: 1.0.0
+Title: Subpixel Confusion Matrix
+Authors@R: c(person(given = "Dainius", family = "Masiliunas", role = c("aut", "cre"),
+             email = "pastas4@gmail.com", comment = c(ORCID = "0000-0001-5654-1277"))
+             )
+Description: An implementation of the algorithm for calculating confusion
+    matrices for fuzzy (fractional) land cover classes, including the associated
+    uncertainties, as given in the paper by Silvan-Cardenas and Wang (2008)
+    <doi:10.1016/j.rse.2007.07.017>. The operators to use for the agreement and
+    disagreement cells are user-configurable, and the ones used in the paper are
+    included.
+Depends:
+    R (>= 3.0.0)
+Suggests:
+    lattice,
+    gridExtra
+License: GPL (>= 3)
+BugReports: https://github.com/GreatEmerald/SCM/issues
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
