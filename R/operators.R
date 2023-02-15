@@ -6,15 +6,33 @@
 #' 
 #' @name operators
 #' @rdname operators
-#' @param s_nk The matrix of predicted values
-#' @param r_nl The matrix of observed values
-#' @param sp_nk The overestimation matrix (predictions minus observations)
-#' @param rp_nl The underestimation matrix (observations minus predictions)
+#' @param s_nk grade of membership of pixel n to class k assigned by the
+#' assessed dataset (predicted value)
+#' @param r_nl grade of membership of pixel n to class l assigned by the
+#' reference dataset (observed value)
+#' @param sp_nk The overestimation value (predictions minus observations)
+#' @param rp_nl The underestimation value (observations minus predictions)
 #' @param k Index in the resulting confusion matrix,
 #' indicating which class was predicted (confusion matrix row).
 #' @param l Index in the resulting confusion matrix,
 #' indicated which class it was supposed to be attributed to
 #' (confusion matrix column).
+#' @return The resulting statistic as a number.
+#' @examples
+#' observed = c(X1=0.4, X2=0.3, X3=0.2, X4=0.1)
+#' predicted = c(X1=0.5, X2=0.4, X3=0.1, X4=0)
+#' # X1 agreement
+#' SI(predicted["X1"], observed["X1"])
+#' LEAST(predicted["X1"], observed["X1"])
+#' # X1 disagrement: could be attributed to either X3 or X4
+#' relu <- function(x) sapply(x, function(z) max(0,z))
+#' PROD_D(relu(predicted-observed), relu(observed-predicted), 1, 3)
+#' MIN_D(relu(predicted-observed), relu(observed-predicted), 1, 3)
+#' LEAST_D(relu(predicted-observed), relu(observed-predicted), 1, 3)
+#' # Full SCM
+#' SCM(predicted, observed, disagreement=PROD_D)$P
+#' SCM(predicted, observed, disagreement=MIN_D)$P
+#' SCM(predicted, observed, disagreement=LEAST_D)$P
 NULL
 
 #' @rdname operators

@@ -7,6 +7,13 @@
 #' 
 #' @param scm The \code{scm} object to enhance.
 #' @return An enhanced \code{scm} object.
+#' @examples
+#' observed = c(Class_1=0.5, Class_2=0.375, Class_3=0.125)
+#' predicted = c(Class_1=0.625, Class_2=0.25, Class_3=0.125)
+#' SCM(predicted, observed, agreement="*", disagreement=NULL)
+#' totals.scm(SCM(predicted, observed, agreement="*", disagreement=NULL))
+#' # Same as:
+#' SCM(predicted, observed, agreement="*", disagreement=NULL, totals=TRUE)
 #' @export
 totals.scm = function(scm)
 {

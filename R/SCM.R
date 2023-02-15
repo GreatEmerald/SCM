@@ -9,6 +9,7 @@
 #' @param agreement A function for calculating the diagonals of the confusion matrix.
 #' This can be any unary reduction function, such as \code{min}, taking two
 #' numbers and returning one.
+#' Passing \code{NULL} results in a disagreement matrix.
 #' @param disagreement A function for calculating the off-diagonals of the confusion
 #' matrix. If the string \code{"SCM"} is given, the disagreement is calculated
 #' using the mean of \code{MIN_D} and \code{LEAST_D}, with the associated
@@ -17,6 +18,7 @@
 #' the underestimation matrix, and indices for the row and column of the result.
 #' With a custom function, the uncertainty is not calculated
 #' (a zero matrix is returned).
+#' Passing \code{NULL} results in an agreement matrix.
 #' @param scale Boolean, whether the result should be scaled (reported in percentages).
 #' @param accuracy Boolean, whether to calculate accuracy statistics.
 #' Passes the result through \code{accuracy.scm}.

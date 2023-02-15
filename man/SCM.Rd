@@ -26,7 +26,8 @@ Each row must sum up to 1, and must correspond to the equivalent rows in
 
 \item{agreement}{A function for calculating the diagonals of the confusion matrix.
 This can be any unary reduction function, such as \code{min}, taking two
-numbers and returning one.}
+numbers and returning one.
+Passing \code{NULL} results in a disagreement matrix.}
 
 \item{disagreement}{A function for calculating the off-diagonals of the confusion
 matrix. If the string \code{"SCM"} is given, the disagreement is calculated
@@ -35,7 +36,8 @@ uncertainty, as recommended by the Silvan-Cardenas and Wang (2008) paper.
 Otherwise, the function must take four arguments: the overestimation matrix,
 the underestimation matrix, and indices for the row and column of the result.
 With a custom function, the uncertainty is not calculated
-(a zero matrix is returned).}
+(a zero matrix is returned).
+Passing \code{NULL} results in an agreement matrix.}
 
 \item{scale}{Boolean, whether the result should be scaled (reported in percentages).}
 

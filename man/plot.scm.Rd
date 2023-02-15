@@ -17,3 +17,9 @@ Nothing, a plot is made as a side effect.
 \description{
 Rerquires the \code{lattice} and \code{gridExtra} packages to function.
 }
+\examples{
+observed = c(Class_1=0.5, Class_2=0.375, Class_3=0.125)
+predicted = c(Class_1=0.625, Class_2=0.25, Class_3=0.125)
+scm = SCM(predicted, observed, agreement="*", disagreement=NULL)
+plot(scm)
+}

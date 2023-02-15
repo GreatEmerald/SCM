@@ -14,6 +14,13 @@
 #' \code{P_producer_accuracy}, \code{U_producer_accuracy}), overall accuracies
 #' (\code{P_overall_accuracy}, \code{U_overall_accuracy}) and kappa statistics
 #' (\code{P_kappa}, \code{U_kappa}).
+#' @examples
+#' observed = c(X1=0.4, X2=0.3, X3=0.2, X4=0.1)
+#' predictedA = c(X1=0.2, X2=0.3, X3=0.4, X4=0.1)
+#' SCM(predictedA, observed, disagreement=PROD_D)
+#' accuracy.scm(SCM(predictedA, observed, disagreement=PROD_D))
+#' # Same as:
+#' SCM(predictedA, observed, disagreement=PROD_D, accuracy=TRUE)
 #' @export
 accuracy.scm = function(scm)
 {

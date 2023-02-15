@@ -25,3 +25,11 @@ An accessory function that enhances an \code{scm} object to include
 accuracy statistics. This function does not modify the \code{P} and \code{U}
 matrices, making them compatible with \code{scm} objects without enhancement.
 }
+\examples{
+observed = c(X1=0.4, X2=0.3, X3=0.2, X4=0.1)
+predictedA = c(X1=0.2, X2=0.3, X3=0.4, X4=0.1)
+SCM(predictedA, observed, disagreement=PROD_D)
+accuracy.scm(SCM(predictedA, observed, disagreement=PROD_D))
+# Same as:
+SCM(predictedA, observed, disagreement=PROD_D, accuracy=TRUE)
+}
