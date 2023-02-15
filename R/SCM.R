@@ -35,6 +35,12 @@
 #' and \code{totals.scm}.
 #' 
 #' @example examples/SCM.R
+#' @references
+#'  Silvan-Cardenas JL, Wang L (2008). "Sub-pixel confusion-uncertainty
+#'  matrix for assessing soft classifications." _Remote Sensing of
+#'  Environment_, *112*(3), 1081-1095. ISSN 0034-4257,
+#'  doi:10.1016/j.rse.2007.07.017
+#'  <https://doi.org/10.1016/j.rse.2007.07.017>.
 #' 
 #' @export
 SCM = function(predicted, observed, agreement=min, disagreement="SCM", scale=FALSE, accuracy=FALSE, totals=FALSE, plot=FALSE)

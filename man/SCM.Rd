@@ -132,3 +132,10 @@ SCM(reference, observed, totals=TRUE, plot=TRUE) # 92\%
 SCM(model1, observed, totals=TRUE, plot=TRUE) # 92\%
 SCM(control, observed, totals=TRUE, plot=TRUE) # 65\%
 }
+\references{
+Silvan-Cardenas JL, Wang L (2008). "Sub-pixel confusion-uncertainty
+matrix for assessing soft classifications." \emph{Remote Sensing of
+Environment}, \emph{112}(3), 1081-1095. ISSN 0034-4257,
+doi:10.1016/j.rse.2007.07.017
+\url{https://doi.org/10.1016/j.rse.2007.07.017}.
+}

@@ -1,0 +1,9 @@
+citation(auto = meta)
+
+bibentry(bibtype = "Article",
+         title = "Sub-pixel confusion-uncertainty matrix for assessing soft classifications",
+         author = c(person(c("J.", "L."), "Silv\\'{a}n-C\\'{a}rdenas"),
+                    person("L.", "Wang")),
+         year = "2008", journal = "Remote Sensing of Environment",
+         volume = "112", issn = "0034-4257", number = "3", pages = "1081--1095",
+         doi = "10.1016/j.rse.2007.07.017")
