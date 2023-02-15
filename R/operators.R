@@ -4,9 +4,12 @@
 #' (with a \code{D_} prefix) that were defined by
 #' Silvan-Cardenas and Wang (2008).
 #' 
+#' @name operators
 #' @rdname operators
-#' @param s_nk The overestimation matrix (predictions minus observations)
-#' @param r_nl The underestimation matrix (observations minus predictions)
+#' @param s_nk The matrix of predicted values
+#' @param r_nl The matrix of observed values
+#' @param sp_nk The overestimation matrix (predictions minus observations)
+#' @param rp_nl The underestimation matrix (observations minus predictions)
 #' @param k Index in the resulting confusion matrix,
 #' indicating which class was predicted (confusion matrix row).
 #' @param l Index in the resulting confusion matrix,

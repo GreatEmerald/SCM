@@ -18,7 +18,7 @@
 #' (a zero matrix is returned).
 #' @param scale Boolean, whether the result should be scaled (reported in percentages).
 #' @return A confusion matrix.
-Comparator = function(s_k, r_l, A=MIN, D=PROD_D, scale=FALSE)
+Comparator = function(s_k, r_l, A=min, D=PROD_D, scale=FALSE)
 {
     # If we have a data.frame, convert into a matrix
     if (is.data.frame(s_k))
